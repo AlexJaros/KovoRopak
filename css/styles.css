@@ -3095,8 +3095,8 @@ td:last-child {
  *
  * ------------------------------------------------------------------- */
 .s-header {
-    --header-height : 10rem;
-    --logo-width    : 30rem;
+    --header-height : 7rem;
+    --logo-width    : 20rem;
 
     z-index         : 100;
     background-color: transparent;
@@ -3379,6 +3379,7 @@ td:last-child {
         display     : block;
         padding-left: 0;
         margin      : 0 0 var(--vspace-1_5) 0;
+        text-align  : center;
         transform   : translateY(-2rem);
         opacity     : 0;
         visibility  : hidden;
@@ -3827,7 +3828,7 @@ td:last-child {
 }
 
 .s-about__content {
-    align-items    : center;
+    align-items    : flex-start;
     justify-content: space-between;
 }
 
@@ -3838,7 +3839,7 @@ td:last-child {
 }
 
 .s-about__content-end {
-    padding-top   : var(--vspace-1_5);
+    padding-top   : var(--vspace-6);
     padding-bottom: var(--vspace-1);
 }
 
