@@ -4292,12 +4292,53 @@ td:last-child {
     gap                  : var(--vspace-0_5);
 }
 
+.gas-info__gallery a {
+    display      : block;
+    position     : relative;
+    overflow     : hidden;
+    border-radius: 8px;
+    line-height  : 0;
+}
+
 .gas-info__gallery img {
     width        : 100%;
     height       : 100%;
     aspect-ratio : 4 / 3;
     object-fit   : cover;
     border-radius: 8px;
+    transition   : transform 0.3s ease;
+}
+
+.gas-info__gallery--portrait img {
+    aspect-ratio: 3 / 4;
+}
+
+.gas-info__gallery a:hover img {
+    transform: scale(1.05);
+}
+
+.gas-info__gallery a:hover .machine-image__icon {
+    opacity: 1;
+}
+
+.gas-info__gallery-more {
+    position        : absolute;
+    inset           : 0;
+    display         : flex;
+    align-items     : center;
+    justify-content : center;
+    background-color: rgba(0, 0, 0, 0.55);
+    color           : #fff;
+    font-family     : var(--type-2);
+    font-size       : 2.4rem;
+    font-weight     : 600;
+    letter-spacing  : 0.02em;
+    pointer-events  : none;
+    transition      : background-color 0.3s ease;
+}
+
+.gas-info__gallery a:hover .gas-info__gallery-more {
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 @media screen and (max-width: 600px) {
@@ -4499,6 +4540,12 @@ td:last-child {
     opacity   : 1;
     visibility: visible;
     transform : scale(1);
+}
+
+.gallery-items__item--has-more::after,
+.gallery-items__item--has-more .gallery-items__item-thumb::before,
+.gallery-items__item--has-more .gallery-items__item-thumb::after {
+    display: none;
 }
 
 /* ------------------------------------------------------------------- 
